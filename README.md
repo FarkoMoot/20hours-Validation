@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # hours20
 
 A new Flutter project.
@@ -18,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 =======
 # 20hours-Validation
 Projeto criado para validar estratégia de aprendizagem de 20 horas.
->>>>>>> bff3851d9b781ee66858bc947a0530236f4bfe14
+
