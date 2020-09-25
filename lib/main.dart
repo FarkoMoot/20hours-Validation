@@ -48,7 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             BoxDefault(varTeste: 'abc'),
             BoxDefault(varTeste: 'abcd'),
-            BoxDefault(varTeste: 'abcde')
+            BoxDefault(varTeste: 'abcde'),
+            BoxDefault(varTeste: 'abcdef')
           ],
         ),
       ),
