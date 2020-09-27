@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'box.dart';
+//import 'box2.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,6 +38,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void generateWidGet() {
+    for (int i; i < 10; i++) {
+      BoxDefault(varTeste: " asd $i asdd");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,12 +51,13 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
+        child: ListView(
           children: <Widget>[
             BoxDefault(varTeste: 'abc'),
             BoxDefault(varTeste: 'abcd'),
             BoxDefault(varTeste: 'abcde'),
-            BoxDefault(varTeste: 'abcdef')
+            BoxDefault(varTeste: 'abcdef'),
+            BoxDefault(varTeste: 'abcdefg'),
           ],
         ),
       ),

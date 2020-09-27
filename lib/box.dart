@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'box2.dart';
 /*
 class BoxDefault extends StatelessWidget {
   int _margin = 10;
@@ -31,7 +32,10 @@ class _BoxDefaultState extends State<BoxDefault> {
         color: Colors.red,
         margin: EdgeInsets.all(20.0),
         padding: EdgeInsets.all(20.0),
+        height: 100,
+        width: 100,
+        //decoration: BoxDecoration(border: Border.all()),
         child: Container(
-            color: Colors.blue, height: 40, child: Text(widget.varTeste)));
+            color: Colors.blue[50], height: 40, child: BoxDefault2()));
   }
 }
