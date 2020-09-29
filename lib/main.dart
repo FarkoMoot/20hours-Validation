@@ -44,23 +44,113 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  void testa() {
+    //return 1;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        elevation: 3,
+        backgroundColor: Colors.green,
+        centerTitle: true,
+        toolbarHeight: 50,
+        toolbarOpacity: 1,
       ),
       body: Center(
-        child: ListView(
-          children: <Widget>[
-            BoxDefault(varTeste: 'abc'),
-            BoxDefault(varTeste: 'abcd'),
-            BoxDefault(varTeste: 'abcde'),
-            BoxDefault(varTeste: 'abcdef'),
-            BoxDefault(varTeste: 'abcdefg'),
-          ],
-        ),
+        child: ListView(children: <Widget>[
+          Container(
+            height: 90,
+            width: 90,
+            color: Colors.green,
+            child: RaisedButton(
+                onPressed: () => {print('x')},
+                onLongPress: () {
+                  print('y');
+                },
+                colorBrightness: Brightness.dark,
+                child: Text('BTNS')),
+          ),
+          Text(""),
+          RaisedButton(
+            onPressed: () => {print('x')},
+            onLongPress: () {
+              print('y');
+            },
+            colorBrightness: Brightness.dark,
+            child: Container(
+                height: 90,
+                width: 90,
+                color: Colors.green,
+                child: Text('BTNS')),
+          ),
+          BoxDefault(varTeste: 'abc'),
+          BoxDefault(varTeste: 'abcd'),
+          BoxDefault(varTeste: 'abcde'),
+        ]),
       ),
+      //      ),  //center
     );
   }
 }
+
+/*
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+        elevation: 3,
+        backgroundColor: Colors.green,
+        centerTitle: true,
+        toolbarHeight: 50,
+        toolbarOpacity: 1,
+      ),
+      body: Center(
+        child: Column(children: <Widget>[
+          ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              Container(
+                height: 30,
+                width: 30,
+              )
+            ],
+          ),
+          ListView(children: <Widget>[
+            Container(
+              height: 90,
+              width: 90,
+              color: Colors.green,
+              child: RaisedButton(
+                  onPressed: () => {print('x')},
+                  onLongPress: () {
+                    print('y');
+                  },
+                  colorBrightness: Brightness.dark,
+                  child: Text('BTNS')),
+            ),
+            Text(""),
+            RaisedButton(
+              onPressed: () => {print('x')},
+              onLongPress: () {
+                print('y');
+              },
+              colorBrightness: Brightness.dark,
+              child: Container(
+                  height: 90,
+                  width: 90,
+                  color: Colors.green,
+                  child: Text('BTNS')),
+            ),
+            BoxDefault(varTeste: 'abc'),
+            BoxDefault(varTeste: 'abcd'),
+            BoxDefault(varTeste: 'abcde'),
+          ]),
+        ]),
+      ),  //center
+    );
+  }
+*/
