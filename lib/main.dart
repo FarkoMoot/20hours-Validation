@@ -36,11 +36,32 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var newtaskctrl = TextEditingController();
+
+  void add() {
+    setState(() {
+      widget.items.add(Item(
+        title: newtaskctrl.text,
+        done: false,
+      ));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("20Housr App"),
+        title: TextFormField(
+          keyboardType: TextInputType.text,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+          ),
+          decoration: InputDecoration(
+            labelText: 'Nova Tarefa',
+            labelStyle: TextStyle(color: Colors.white),
+          ),
+        ),
       ),
       body: ListView.builder(
         itemCount: widget.items.length,
@@ -50,9 +71,18 @@ class _HomePageState extends State<HomePage> {
             title: Text(item.title),
             key: Key(item.title),
             value: item.done,
-            onChanged: (value) {},
+            onChanged: (value) {
+              setState(() {
+                item.done = value;
+              });
+            },
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+        backgroundColor: Colors.blue,
       ),
     );
   }
