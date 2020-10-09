@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:hours20/main2.dart';
+import 'file:///C:/Users/Farko/Projetos/hours20/after8hours/main2.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
