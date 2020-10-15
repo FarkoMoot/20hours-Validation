@@ -64,19 +64,20 @@ class _HomePageState extends State<HomePage> {
     });
 
     return new Future.delayed(
-        const Duration(seconds: 1),
-        () => {
-              setState(() {
-                if (res >= 0.7) {
-                  _resultText = "Compensa usar Gasosa!";
-                } else {
-                  _resultText = "Compensa usar etanois!";
-                }
+      const Duration(seconds: 1),
+      () => {
+        setState(() {
+          if (res >= 0.7) {
+            _resultText = "Compensa usar Gasosa!";
+          } else {
+            _resultText = "Compensa usar etanois!";
+          }
 
-                _busy = false;
-                _completed = true;
-              }),
-            });
+          _busy = false;
+          _completed = true;
+        }),
+      },
+    );
   }
 
   reset() {
